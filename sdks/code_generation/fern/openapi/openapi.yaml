@@ -326,6 +326,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorMessage"
+  /v1/private/alerts/webhooks/examples:
+    get:
+      tags:
+      - Alerts
+      summary: Get webhook payload examples
+      description: Get webhook payload examples for all alert event types
+      operationId: getWebhookExamples
+      responses:
+        "200":
+          description: Webhook examples
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebhookExamples"
   /v1/private/alerts/webhooks/tests:
     post:
       tags:
@@ -5120,6 +5134,13 @@ components:
           type: string
         details:
           type: string
+    WebhookExamples:
+      type: object
+      properties:
+        response_examples:
+          type: object
+          additionalProperties:
+            type: string
     WebhookTestResult:
       type: object
       properties:
