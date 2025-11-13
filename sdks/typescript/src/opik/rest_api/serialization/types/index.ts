@@ -26,6 +26,7 @@ export * from "./AlertTriggerPublic";
 export * from "./AlertPublic";
 export * from "./WebhookPublic";
 export * from "./ErrorMessagePublic";
+export * from "./WebhookExamples";
 export * from "./WebhookTestResultStatus";
 export * from "./WebhookTestResult";
 export * from "./AnnotationQueueItemIds";
